@@ -1,17 +1,31 @@
+
+
 #include "pch.h"
+#include <iostream>
+
 #include "Calculator.h"
-
-
-Calculator::Calculator()
-{
-}
-
-
-Calculator::~Calculator()
-{
-}
 
 double Calculator::Calculate(double x, char oper, double y)
 {
-	return 0.0;
+	double resultado;
+	switch (oper)
+	{
+	case '+':
+		resultado = x + y;
+		break;
+	case '*':
+		resultado = x * y;
+		break;
+	case '/':
+		resultado = x / y;
+		break;
+	case'-':
+		resultado = x - y;
+		break;
+	default:
+		resultado = 0;
+		break;
+	}
+	return resultado;
 }
+
